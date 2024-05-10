@@ -10,16 +10,16 @@ public class UserInterface {
         init();
         while (true) {
             System.out.println("Menu Screen");
-            System.out.println("1) Search by Price");
-            System.out.println("2) Search by Make and Model");
-            System.out.println("3) Search by Year");
-            System.out.println("4) Search by Color");
-            System.out.println("5) Search by Mileage");
-            System.out.println("6) Search by Vehicle Type");
-            System.out.println("7) Display All Vehicles");
-            System.out.println("8) Add a Vehicle");
-            System.out.println("9) Remove a Vehicle");
-            System.out.println("0) Exit");
+            System.out.println(" Enter 1 to Search by Price");
+            System.out.println(" Enter 2 to  Search by Make and Model");
+            System.out.println(" Enter 3 to  Search by Year");
+            System.out.println(" Enter 4 to  Search by Color");
+            System.out.println(" Enter 5 to  Search by Mileage");
+            System.out.println(" Enter 6 to Search by Vehicle Type");
+            System.out.println(" Enter 7 to  Display All Vehicles");
+            System.out.println(" Enter 8 to  Add a Vehicle");
+            System.out.println(" Enter 9 to  Remove a Vehicle");
+            System.out.println(" Enter 0 to  Exit");
 
             try { // Enforce input type
                 int choice = scanner.nextInt();
@@ -66,7 +66,7 @@ public class UserInterface {
     }
 
     public void processGetByPriceRequest() {
-        // Prompt for price range
+        // ask for price range
         System.out.print("Enter the minimum price of the vehicle.");
         double min = scanner.nextDouble();
         System.out.print("Enter the maximum price of the vehicle.");
@@ -87,6 +87,15 @@ public class UserInterface {
         // Display
         System.out.println(dealership.getVehiclesByMakeModel(make, model));
     }
+    public void processGetByColorRequest() {
+        // Prompt
+        System.out.print("Enter a color : ");
+        String color = scanner.nextLine();
+
+        // Display
+        System.out.println(dealership.getVehiclesByColor(color));
+    }
+
 
     public void processGetByYearRequest() {
         // Prompt

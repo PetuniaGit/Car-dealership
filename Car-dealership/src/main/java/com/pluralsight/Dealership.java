@@ -27,6 +27,9 @@ public class Dealership {
     }
 
     public List<Vehicle> getVehiclesByPrice(double min, double max) {
+        // Initalize the variable.
+        vehiclesInRange = new ArrayList<>();
+
 
         for (Vehicle vehicle : inventory) {
             if (vehicle.getPrice() >= min && vehicle.getPrice() <= max) {
@@ -38,6 +41,8 @@ public class Dealership {
     }
 
     public List<Vehicle> getVehiclesByMakeModel(String make, String model) {
+        // Initalize the variable.
+        vehiclesByMakeModel = new ArrayList<>();
 
         for (Vehicle vehicle : inventory) {
             if (vehicle.getMake().equalsIgnoreCase(make) && vehicle.getModel().equalsIgnoreCase(model)) {
@@ -49,6 +54,8 @@ public class Dealership {
     }
 
     public List<Vehicle> getVehiclesByYear(int min, int max) {
+        // Initalize the variable.
+        vehiclesByYear = new ArrayList<>();
 
         for (Vehicle vehicle : inventory) {
             if (vehicle.getYear() >= min && vehicle.getYear() <= max) {
@@ -60,6 +67,9 @@ public class Dealership {
     }
 
     public List<Vehicle> getVehiclesByColor(String color) {
+        // Initalize the variable.
+        vehiclesByColor = new ArrayList<>();
+
 
         for (Vehicle vehicle : inventory) {
             if (vehicle.getColor().equalsIgnoreCase(color)) {
@@ -71,6 +81,9 @@ public class Dealership {
     }
 
     public List<Vehicle> getVehiclesByMileage(int min, int max) {
+        // Initalize the variable.
+        vehiclesByMileage = new ArrayList<>();
+
 
         for (Vehicle vehicle : inventory) {
             if (vehicle.getOdometer() >= min && vehicle.getOdometer() <= max) {
@@ -82,6 +95,9 @@ public class Dealership {
     }
 
     public List<Vehicle> getVehiclesByType(String vehicleType) {
+        // Initalize the variable.
+        vehiclesByType = new ArrayList<>();
+
 
         for (Vehicle vehicle : inventory) {
             if (vehicle.getVehicleType().equalsIgnoreCase(vehicleType)) {
@@ -94,6 +110,8 @@ public class Dealership {
 
     // Create removeVehicle method.
     public void removeVehicle(Vehicle vehicle) {
+        // Initalize the variable.
+        inventory= new ArrayList<>();
         inventory.remove(vehicle);
     }
 
@@ -102,6 +120,8 @@ public class Dealership {
     }
 
     public void addVehicle(Vehicle vehicle) {
+        // Initalize the variable.
+        inventory= new ArrayList<>();
         inventory.add(vehicle);
     }
 
